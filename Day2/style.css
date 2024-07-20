@@ -28,8 +28,8 @@ html, body{
     font-weight: 500;
 }
 #cursor{
-    height : 25px;
-    width : 25px;
+    height : 20px;
+    width : 20px;
     background-color: #95c11e;
     border-radius: 50%;
     position: fixed;
@@ -37,7 +37,7 @@ html, body{
 }
 #cursorbg{
     height : 500px;
-    width:500px;
+    width: 500px;
     background-color:#96c11e40;
     border-radius: 50%;
     position: fixed;
@@ -91,8 +91,98 @@ video{
     font-size: 20px;
     font-weight: 500;
     width: 40%;
+    z-index: 10;
 }
 #page2{
     height: 100vh;
     width: 100%;
+    position: relative;
+}
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;    
+}
+#scroller h4{
+    display: inline-block;
+    color: black;
+    font-size: 120px;
+    font-weight: 800;
+    transition: all linear 0.5s;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 10px;
+    -webkit-text-stroke: 2px #ffffff;
+}
+#scroller h4:hover{
+    color:#95c11e;
+}
+#about-us{
+    height: 30vh;
+    width: 100%;
+    margin-top: 15vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.aboutimage{
+    height: 30vh;
+    width: 25vh;
+    border-radius: 5%;
+    object-fit: cover;
+}
+#about-us h1{
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#about-us p{
+    width: 80vh;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+#cards-container{
+    background-color: red;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 70px;
+    position: relative;
+}
+.card{
+    width: 40%;
+    height: 80%;
+    background-color: blue;
+    background-size: cover;
+    background-position: center;
+}
+#card2{
+    position: absolute;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }
