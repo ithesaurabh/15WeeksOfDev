@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: 'montserrat';
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    height: 145px;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    z-index: 99;
+}
+#nav img{
+    height: 75px;
+}
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#cursor{
+    height : 20px;
+    width : 20px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+#cursorbg{
+    height : 500px;
+    width: 500px;
+    background-color:#96c11e40;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(200px);
+    z-index: 1;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgb(0, 0, 0,0.5);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+#page1 h1{
+    font-size: 140px;
+    font-weight: 900;
+    position: relative;
+}
+#page1 h1::before{
+    content: "eat. drink. play.";
+    position: absolute;
+    color: black;
+    top : -6px;
+    left : -6px;
+    -webkit-text-stroke: 2px #95c11e;
+    z-index: -1;
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+#page1 p{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
+    z-index: 10;
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;    
+}
+#scroller h4{
+    display: inline-block;
+    color: black;
+    font-size: 120px;
+    font-weight: 900;
+    transition: all linear 0.5s;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 10px;
+    -webkit-text-stroke: 1px #ffffff;
+}
+#scroller h4:hover{
+    color:#95c11e;
+    -webkit-text-stroke: #95c11e;
+}
+#about-us{
+    height: 30vh;
+    width: 100%;
+    margin-top: 15vh;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.aboutimage{
+    height: 30vh;
+    width: 25vh;
+    border-radius: 5%;
+    object-fit: cover;
+}
+#about-us h1{
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#about-us p{
+    width: 80vh;
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+#cards-container{
+    height: 60vh;
+    margin-top: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+.card{
+    height: 80%;
+    width : 22%;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease-in-out 0.5s;
+}
+#card1{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card2{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3{
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #95c11e;
+    padding: 35% 10%;
+    border-radius: 20px;
+    opacity: 0%;
+    transition: all ease 0.4s;
+}
+.overlay h4{
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    white-space: nowrap;
+    color: black;
+}
+.overlay p{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+.card:hover .overlay{
+    opacity: 1;
+}
+#page3{
+    height: 30vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,rgb(11, 172, 14),rgb(150, 208, 34),#ace022);
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    gap: 45px;
+}
+#page3 img{
+    height: 100%;
+    width: 15%;
+    object-fit: cover;
+}
+#page3 h4{
+    color: black;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 70px;
+    text-align: center;
+}
+#page4{
+    height: 60vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#page4 p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 45px;
+    width: 55%;
+}
+#page4 img{
+    position: absolute;
+    height: 60px;
+}
+#colon1{
+    left: 18%;
+    top: 30%;
+}
+#colon2{
+    right: 18%;
+    bottom: 30%;
+}
+#page4Ext{
+    height: 50vh;
+    width: 100%;
+    gap: 80px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.elem1{
+    width: 24%;
+    height: 35%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+.elem1 h2{
+    height: 100%;
+    width: 100%;
+    color: black;
+    background-color: #96c11e;
+    font-size: 30px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all ease-in 0.6s;
+    z-index: 10;
+}
+.elem1 img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    filter: blur(3px);
+}
+.elem1:hover #page4Ext p{ /*why is it not working*/
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 2px #ffffff;
+}
+.elem1:hover h2{
+    background-color: transparent;
+    color: white;
+    font-size: 42px;
+}
+#page4Ext p{
+    font-size: 120px;
+    font-weight: 900;
+    position: absolute;
+    top: 10%;
+    color: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    -webkit-text-stroke: 2px #95c11e;
+}
+#footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,rgb(11, 172, 14),rgb(150, 208, 34),#ace022);
+
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
