@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div id="main">
+      <div id="navbar">
+        <div id="nav-up">
+          <h1>KRMADA</h1>
+        </div>
+        <div id="nav-down">
+          <h3 class="crsrRToBeScaledFor"  onclick="scrollToSection('hero-section')">Home</h3>
+          <h3 class="crsrRToBeScaledFor" onclick="scrollToSection('page2')">About</h3>
+          <h3 class="crsrRToBeScaledFor" onclick="scrollToSection('page3')">Projects</h3>
+          <h3 class="crsrRToBeScaledFor" onclick="scrollToSection('page5')">Blogs</h3>
+        </div>
+      </div>
+      <div id="cursor"></div>
+      <div id="cursorbg"></div>
+      <div id="hero-section">
+        <img src="res/heroimg.png" alt="" />
+        <div id="hero-section-text">
+          <div id="animateDiv">
+            <div class="el" id="ele1"></div>
+            <div class="el" id="ele2"></div>
+            <div class="el" id="ele3"></div>
+          </div>
+          <p>I am</p>
+          <h2>Saurabh Kumar Jha</h2>
+          <h3>Web & Android Developer</h3>
+          <div class="makeCol">
+            <div class="primaryButton crsrRToBeScaledFor"  onclick="gotoLinkedIn()"id="collab">
+              <h4>Collab</h4>
+            </div>
+            <div class="primaryButton crsrRToBeScaledFor"  onclick="sendEmail()" id="hireme">
+              <h4>Hire me</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page2">
+        <div class="line-separator" id="first-line-separator"></div>
+        <div class="heading">
+          <div class="headingline"></div>
+          <h2>about</h2>
+        </div>
+        <div id="about-content" class = "innerMain">
+            <img src="res/aboutpic.png" alt="">
+          <div id="content">
+            <div class="crsrRToBeScaledFor" onclick="downloadResume()" id="downloadResumebtn">
+              <i class="ri-download-2-line"></i>
+              <h3>Download Resume</h3>
+            </div>
+            <p>Hi! I’m Saurabh Kumar Jha, aka KRMADA. I’m a web and Android developer, currently in my final year of BTech CSE-AIML at Brainware University, Barasat, West Bengal, India.
+
+              <p><span>Tech Stack:</span>
+              
+              Web, Android, Java, JS fundamentals & 
+                Basic understanding of cloud technologies.</p>            
+              <p><span>Internship (On-site + Remote):</span> Designed and developed B2B Android apps, integrated APIs.</p>
+              <p><span class="crsrRToBeScaledFor" onclick="gotoHack4Bengal()">HACK4BENGAL:</span> Core team member responsible for UI and graphical elements for a 36-hour hackathon at JISCOE - Kalyani.</p>
+              
+              <p><span>Achievements:</span>
+              
+                Completed the #100DaysOfDSA challenge.</p>
+              
+              </p>
+          </div>
+        </div>
+      </div>
+      <div id="page3">
+        <div class="line-separator"></div>
+        <div class="heading">
+          <div class="headingline"></div>
+          <h2>projects</h2>
+        </div>
+        <div id="projectsMain" class = "innerMain">
+          <div id="project-row-1">
+            <div class="projectContainer crsrRToBeScaledFor" onclick="project1()">
+              <h4>Project Heading</h4>
+              <h5>project description</h5>
+            </div>
+            <div class="projectContainer crsrRToBeScaledFor" onclick="project2()">
+              <h4>Project Heading</h4>
+              <h5>project description</h5>
+            </div>
+            <div class="projectContainer crsrRToBeScaledFor" onclick="
+            project3()">
+              <h4>Project Heading</h4>
+              <h5>project description</h5>
+            </div>
+           
+          </div>
+          <div id="project-row-2">
+            <div onclick="gotoGitHub()" id="viewMoreBtn" class="viewMoreBtnClass crsrRToBeScaledFor">
+              <h4>View more</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page4">
+        <div class="line-separator"></div>
+        <div class="heading">
+          <div class="headingline"></div>
+          <h2>tech stack</h2>
+        </div>
+        <div id="techStackMain" class="innerMain">
+          <div class = "rows" id="ts-row-1">
+            <div class="ts">
+              <div class="ts-in"></div>
+              <h3>ABCD</h3>
+            </div>
+            <div class="ts">
+              <div class="ts-in"></div>
+              <h3>ABCD</h3>
+            </div>
+          </div>
+          <div class = "rows" id="ts-row-2">
+            <div class="ts">
+              <div class="ts-in"></div>
+              <h3>ABCD</h3>
+            </div>
+            <div class="ts">
+              <div class="ts-in"></div>
+              <h3>ABCD</h3>
+            </div>
+          </div>
+          <div class = "rows" id="ts-row-3">
+            <div class="ts">
+              <div class="ts-in"></div>
+              <h3>ABCD</h3>
+            </div>
+          </div>
+          <div class = "rows" id="ts-row-4">
+            <div class="ts">
+              <div class="ts-in"></div>
+              <h3>ABCD</h3>
+            </div>
+            <div class="ts">
+              <div class="ts-in"></div>
+              <h3>ABCD</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page5">
+        <div class="line-separator"></div>
+        <div class="heading">
+          <div class="headingline"></div>
+          <h2>blogs</h2>
+        </div>
+        <div id="blogsMain" class="innerMain">
+          <div id="Blogscolumn1">
+            <div onclick="blog1()" class="blogs-inner-row crsrRToBeScaledFor
+            " id="blogsrow1">
+              <div class="blogImage" id="blogImage1"></div>
+              <div class="blogDeet" id="blogDeet1">
+                <h2>My #100DaysOfDSA journey!!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt cupiditate, rerum iste nisi iure accusamus aut obcaecati? Odit, iure nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur eveniet veniam sed numquam culpa fugiat praesentium, autem non odio.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt cupiditate, rerum iste nisi iure accusamus aut obcaecati? Odit, iure nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur eveniet veniam sed numquam culpa fugiat praesentium, autem non odio.</p>
+              </div>
+            </div>
+            <div onclick="blog2()" class="blogs-inner-row crsrRToBeScaledFor" id="blogsrow2">
+              <div class="blogImage" id="blogImage2"></div>
+              <div class="blogDeet" id="blogDeet2">
+                <h2>My #100DaysOfDSA journey!!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt cupiditate, rerum iste nisi iure accusamus aut obcaecati? Odit, iure nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur eveniet veniam sed numquam culpa fugiat praesentium, autem non odio.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt cupiditate, rerum iste nisi iure accusamus aut obcaecati? Odit, iure nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consectetur eveniet veniam sed numquam culpa fugiat praesentium, autem non odio.</p>
+              </div>
+            </div>
+          </div>
+          <div onclick="alert('There are only two blogs at this moment🫠');" class="crsrRToBeScaledFor" id="Blogscolumn2">
+            <!-- <h4>More</h4> -->
+            <i class="ri-arrow-down-wide-fill"></i>
+          </div>
+      </div>
+      <div id="page6">
+        <div class="line-separator"></div>
+        <div class="heading">
+          <div class="headingline"></div>
+          <h2>Moments</h2>
+        </div>
+        <div id= "momentsMain" class="innerMain">
+
+          <div id="momentsRow1">
+            <div onclick="moment1()" class="columnDiv crsrRToBeScaledFor">
+              <img src="https://images.pexels.com/photos/24460824/pexels-photo-24460824/free-photo-of-esb-among-lower-skyscrapers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+              <p>HACK4BENGAL S3</p> 
+            </div>
+            <div onclick="moment2()" class="columnDiv crsrRToBeScaledFor">
+              <img src="https://images.pexels.com/photos/24460824/pexels-photo-24460824/free-photo-of-esb-among-lower-skyscrapers.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+              <p>TEXIBITION2K24</p> 
+            </div></div>
+          <div id="momentsRow2">
+            <div onclick="gotoInstagram()" class="viewMoreBtnClass crsrRToBeScaledFor">  
+              <h4>View more</h4>
+            </div>
+          </div>
+            
+        </div>
+      </div>  
+      <div id="quotePage">
+        <div class="innerMain" id="quoteInner">
+          <div id="quote-row-1" class="quoteInnerRow">
+            <p id="startQuote">"</p>
+          </div>
+          <div id="quote-row-2"  class="quoteInnerRow">
+            <h3>Start where you are. Use what you have. Do what you can.</h3>
+          </div>
+          <div id="quote-row-3"  class="quoteInnerRow">
+            <p id="endQuote">"</p>
+
+          </div>
+        </div>
+      </div>
+      <div id="footer">
+        <div class="innerMain" id="footer-in">
+          <div id="footerRow1">
+            <h2 id="logoname">KRMADA</h2>
+          </div>
+          <div id="footerRow2">
+            <div id="footerCol1">
+              <div class="crsrRToBeScaledFor" onclick="gotoMail()" id="line1">
+                <i class="ri-mail-line"></i>
+                <h3>reach.saurabhkumarjha@gmail.com</h3>
+              </div>
+              <div id="line2">
+                <i onclick="gotoX()" style="scale: 0.8;" class="ri-twitter-x-line crsrRToBeScaledFor"></i>
+                <i onclick="gotoLinkedIn()" class="ri-linkedin-fill crsrRToBeScaledFor"></i>
+                <i onclick="gotoInstagram()" style="scale: 0.95;" class="ri-instagram-line crsrRToBeScaledFor"></i>
+              </div>
+              <div id="line3"></div>
+              <div id="line4">
+                <i onclick="gotoGitHub()" class="ri-github-fill crsrRToBeScaledFor"></i>
+                <i onclick="gotoLeetCode()" class="ri-code-s-slash-line crsrRToBeScaledFor"></i>
+              </div>
+            </div>
+            <div id="footerCol2"></div>
+            <div id="footerCol3">
+              <div id="quickLinksBox">
+                <h2>Quick links :</h2>
+                <p class="crsrRToBeScaledFor" onclick="scrollToSection('hero-section')">Home</p>
+                <p class="crsrRToBeScaledFor" onclick="scrollToSection('page2')">About</p>
+                <p class="crsrRToBeScaledFor" onclick="scrollToSection('page3')">Projects</p>
+                <p class="crsrRToBeScaledFor" onclick="scrollToSection('page4')">Tech Stack</p>
+                <p class="crsrRToBeScaledFor" onclick="scrollToSection('page5')">Blogs</p>
+                <p class="crsrRToBeScaledFor" onclick="scrollToSection('page6')">Moments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="foot">
+        <h1>#codingforacause</h1>
+        <h2>~Designed and developed by Saurabh</h2>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

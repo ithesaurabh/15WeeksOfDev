@@ -18,8 +18,6 @@ crsrRToBeScaledFor.forEach(element => {
         crsr.style.scale = 1;
         crsr.style.backgroundColor = "#ace022";
         crsr.style.border = "1px solid #ace022";
-
-
     })  
 });
 gsap.to("#nav", {
@@ -92,13 +90,11 @@ gsap.from("#colon2",{
         scrub : 4
     }
 })
-gsap.from("#page4Ext p",{
-    y : 50,
+gsap.to("#page4Ext p",{
+    y : 60,
     scrollTrigger : {
         trigger : "#page4Ext p",
         scroller : "body",
-        start : "top 70%",
-        end : "top 50%",
         scrub : 1
 
     }

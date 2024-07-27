@@ -308,10 +308,10 @@ video{
     font-size: 42px;
 }
 #page4Ext p{
-    font-size: 120px;
+    font-size: 140px;
     font-weight: 900;
     position: absolute;
-    top: 10%;
+    top: 5%;
     color: transparent;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     -webkit-text-stroke: 2px #95c11e;
